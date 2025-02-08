@@ -525,6 +525,9 @@ button {
   border-radius: 4px;
   width: 264px;
   height: 40px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
   width: 264px;
@@ -532,15 +535,23 @@ button {
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
+  color: #ffffff;
 }
 .footer-input::placeholder {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: #fff;
+  color: #ffffff;
 }
 .footer-btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   min-width: 165px;
   height: 40px;
   border-radius: 4px;
@@ -549,15 +560,14 @@ button {
   width: 165px;
   height: 40px;
   background-color: #4d5ae5;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
   text-align: left;
   margin-right: 16px;
-  color: #fff;
+  cursor: pointer;
+  color: #ffffff;
   position: relative;
 }
 .send-icon {
+  margin-left: 16px;
   fill: #fff;
   position: absolute;
   top: 10px;
@@ -570,7 +580,9 @@ button {
   height: 100%;
   position: fixed;
   top: 0;
-  background-color: rgba(30, 24, 35, 0.582);
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -583,9 +595,12 @@ button {
 .modal {
   width: 408px;
   min-height: 584px;
-  background-color: #fff;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   position: absolute;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -597,25 +612,51 @@ button {
 .modal-close {
   width: 24px;
   height: 24px;
-  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
   position: absolute;
   top: 24px;
   right: 24px;
+}
+.modal-close:hover {
+  background-color: #404bbf;
+  border: none;
+}
+.modal-close:focus {
+  background-color: #404bbf;
+  border: none;
 }
 .close-icon {
   fill: #2e2f42;
   stroke-width: 1px;
   stroke: rgba(0, 0, 0, 0.1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close:hover {
   background-color: #404bbf;
+  border: none;
 }
+.modal-close:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
 .close-icon:hover {
-  fill: #fff;
+  fill: #ffffff;
+}
+.close-icon:focus {
+  fill: #ffffff;
 }
 .modal-title {
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -638,9 +679,11 @@ button {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
+  background-color: transparent;
   padding-left: 38px;
   padding-right: 19px;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus {
   border-color: #4d5ae5;
@@ -655,28 +698,36 @@ button {
   fill: #2e2f42;
   position: absolute;
   top: 50%;
-  left: 19px;
+  left: 16px;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-icon:active {
   fill: #4d5ae5;
 }
 
 .modal-label {
-  display: inline-block;
+  display: block;
   margin-bottom: 4px;
   color: #8e8f99;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
 }
 .modal-textarea {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  padding: 8px 16px;
+  color: rgba(46, 47, 66, 0.4);
   width: 100%;
   height: 120px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: #fcfcfc;
   padding-left: 16px;
   padding-top: 8px;
@@ -688,6 +739,17 @@ button {
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+}
+.modal-textarea:focus {
+  border-color: #4d5ae5;
+}
+.modal-field-check {
+  display: flex;
+  margin-bottom: 24px;
+  color: #8e8f99;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 .modal-check-text {
   font-size: 12px;
@@ -710,8 +772,16 @@ button {
 }
 .modal-check:checked + .modal-check-text .modal-check-item {
   background-color: #404bbf;
-  border: 1px solid #404bbf;
+  border: none;
   fill: #f4f4fd;
+}
+.policy-span {
+  display: inline-flex;
+  margin-left: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #4d5ae5;
 }
 .send-button-container {
   display: flex;
@@ -721,19 +791,19 @@ button {
   align-items: center;
   border-radius: 4px;
   border: none;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
+  cursor: pointer;
   min-width: 169px;
   height: 56px;
   padding: 16px 32px;
   margin: 0 auto;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
-}
-.policy-span {
-  display: inline-flex;
-  margin-left: 4px;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
