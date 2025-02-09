@@ -509,13 +509,7 @@ button {
   margin-left: 80px;
   padding-right: 160px;
 }
-.footer-title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  min-width: 75px;
-  padding-bottom: 16px;
-}
+
 .footer-title-form {
   align-items: baseline;
   display: block;
@@ -524,15 +518,9 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-bottom: 0 auto;
+  margin-bottom: 16px;
 }
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  margin-top: 16px;
-  padding-bottom: 124px;
-}
+
 .footer-form {
   display: flex;
   gap: 24px;
@@ -541,7 +529,7 @@ button {
 }
 .footer-input {
   display: flex;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   width: 264px;
   height: 40px;
@@ -588,6 +576,7 @@ button {
 .send-icon {
   margin-left: 16px;
   fill: #fff;
+  margin-left: 16px;
   top: 10px;
 }
 
@@ -791,6 +780,9 @@ button {
   align-items: center;
   justify-content: center;
   background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: transparent;
