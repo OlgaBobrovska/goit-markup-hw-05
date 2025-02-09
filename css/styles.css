@@ -5,7 +5,6 @@ body {
 }
 a {
   text-decoration: none;
-  display: block;
 }
 .visually-hidden {
   position: absolute;
@@ -499,15 +498,7 @@ button {
 }
 
 .footer-form-div {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  justify-content: space-between;
-  min-width: 453px;
-  height: 80px;
-  gap: 24px;
-  margin-left: 80px;
-  padding-right: 160px;
+  margin-left: auto;
 }
 
 .footer-title-form {
@@ -539,8 +530,7 @@ button {
   background-color: transparent;
   width: 264px;
   height: 40px;
-  padding-left: 16px;
-  padding-bottom: 8px;
+  padding: 8px 16px;
   color: #ffffff;
 }
 .footer-input::placeholder {
@@ -567,7 +557,6 @@ button {
   height: 40px;
   background-color: #4d5ae5;
   text-align: left;
-  margin-right: 16px;
   cursor: pointer;
   color: #ffffff;
 }
@@ -592,11 +581,11 @@ button {
   visibility: hidden;
   pointer-events: none;
 }
-.is-open {
+/* .is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-}
+} */
 .modal {
   width: 408px;
   min-height: 584px;
@@ -738,12 +727,7 @@ button {
   border-color: #4d5ae5;
 }
 .modal-field-check {
-  display: inline-flex;
   margin-bottom: 24px;
-  color: #8e8f99;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
 }
 .modal-check-text {
   font-size: 12px;
@@ -780,6 +764,7 @@ button {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #4d5ae5;
+  text-decoration: underline;
 }
 
 .send-button {
